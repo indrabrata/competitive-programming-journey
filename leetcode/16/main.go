@@ -5,6 +5,14 @@ import (
 	"sort"
 )
 
+func main() {
+	// Example usage of threeSumClosest
+	nums := []int{-1, 2, 1, -4}
+	target := 1
+	result := threeSumClosest(nums, target)
+	println(result) // Output: 2
+}
+
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	closest := nums[0] + nums[1] + nums[2]

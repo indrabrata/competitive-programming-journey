@@ -1,5 +1,20 @@
 package main
 
+import "fmt"
+
+func main() {
+	// Example usage of addTwoNumbers
+	l1 := &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3}}}
+	l2 := &ListNode{Val: 5, Next: &ListNode{Val: 6, Next: &ListNode{Val: 4}}}
+	result := addTwoNumbers(l1, l2)
+
+	// Print the result
+	for result != nil {
+		fmt.Println(result.Val)
+		result = result.Next
+	}
+}
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
