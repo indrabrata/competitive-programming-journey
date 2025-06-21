@@ -1,5 +1,9 @@
-n, x = map(int, input().split())
-nums = list(map(int, input().split()))
+# Input:
+# 3 11
+# 1 5 7
+
+n, x = map(int, input().split(sep=' '))
+nums = list(map(int, input().split(sep=' ')))
 
 nums.sort(reverse=True)
 
