@@ -17,8 +17,6 @@ class Solution:
             return True
     return False
 
-    
-
 if __name__ == "__main__":
   nums = [3,0,8,2,0,0,1]
   solution = Solution()

@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "*.css": "tailwindcss",
+    "vector": "cpp"
+  }
+}
