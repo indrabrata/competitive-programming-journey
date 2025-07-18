@@ -1,5 +1,7 @@
 #include <iostream>
 
+#define ll long long
+
 using namespace std;
 
 int main(){
@@ -7,7 +9,7 @@ int main(){
 
   cin >> n;
 
-  long long a, b , c;
+  ll a, b , c;
 
   for(int i = 0; i < n; i++){
     cin >> a >> b >> c;

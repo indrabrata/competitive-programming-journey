@@ -1,7 +1,12 @@
 import java.util.List;
+import java.util.Scanner;
 
 class Solution {
   public List<List<Integer>> permute(int[] nums) {
-    return null;
+    Scanner scanner = new Scanner(System.in);
+
+    scanner.close();
+
+    
   }
-} 
+}
