@@ -2,18 +2,20 @@
 # 3 11
 # 1 5 7
 
-n, x = map(int, input().split(sep=' '))
-nums = list(map(int, input().split(sep=' ')))
+import sys
 
-nums.sort(reverse=True)
+if __name__ == "__main__":
+  n, x = map(int, input().split(sep=' '))
+  nums = list(map(int, input().split(sep=' ')))
 
-total = 0
-for i, num in enumerate(nums):
-  if x == 0:
-    break
+  dp = [sys.maxsize] * (x+1)
+  dp[0] = 0
+  for i in range (1, n+1):
+    for j in range (nums[i - 1], x+1):
+      dp[j] = min(dp[j], dp[j - nums[i - 1]] + 1)
   
-  a = x % num
-  x -= a *num
-  total += a   
+  ans = dp[x] if dp[x] < sys.maxsize else -1
   
-print(total)
+  
+  print(ans)
+  
