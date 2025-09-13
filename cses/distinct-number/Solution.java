@@ -7,7 +7,7 @@ public class Solution {
       Scanner sc = new Scanner(System.in);
       long n = sc.nextLong();
 
-      Set<Long> set = new HashSet<>(200000);
+      Set<Long> set = HashSet.newHashSet(200000);
       for (int i = 0; i < n; i++) {
          set.add(sc.nextLong());
       }
