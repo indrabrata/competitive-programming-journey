@@ -1,0 +1,8 @@
+{
+  "makefile.configurations": [
+    {
+      "name": "competitive-programming-journey",
+      "problemMatchers": ["$gcc"]
+    }
+  ]
+}
