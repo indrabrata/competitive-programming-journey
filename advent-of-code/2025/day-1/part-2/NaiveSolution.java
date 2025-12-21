@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solution {
-
+public class NaiveSolution {
   public static void main(String[] args) {
     File fileObj = new File("input.txt");
 
@@ -23,33 +22,35 @@ public class Solution {
     long counter = 0;
     long dial = 50;
     for (String rotation : rotations) {
-      if (rotation.isBlank()) {
-        continue;
-      }
-
       char nav = rotation.charAt(0);
       long temp = Long.parseLong(rotation.substring(1));
 
-      switch (nav) {
-        case 'L':
-          dial = dial - temp;
-          break;
-        case 'R':
-          dial = dial + temp;
-          break;
-        default:
-          System.out.println("invalid navigation");
-          System.exit(1);
-      }
+      if (nav == 'L') {
+        while (temp > 0) {
+          dial -= 1;
+          if (dial == -1) {
+            dial = 99;
+          }
 
-      if (dial < 0) {
-        dial = ((dial % 100) + 100) % 100;
-      } else if (dial > 99) {
-        dial = (dial % 100) % 100;
-      }
+          if (dial == 0) {
+            counter += 1;
+          }
 
-      if (dial == 0) {
-        counter++;
+          temp--;
+        }
+      } else if (nav == 'R') {
+        while (temp > 0) {
+          dial += 1;
+          if (dial == 100) {
+            dial = 0;
+          }
+
+          if (dial == 0) {
+            counter += 1;
+          }
+
+          temp--;
+        }
       }
     }
 
