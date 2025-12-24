@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+// Now, an ID is invalid if it is made only of some sequence of digits repeated at least twice. So, 12341234 (1234 two times), 123123123 (123 three times), 1212121212 (12 five times), and 1111111 (1 seven times) are all invalid IDs.
+
 std::vector<std::string> split(const std::string &s, const std::string &delimiter)
 {
   std::vector<std::string> tokens;
@@ -51,15 +53,7 @@ int main()
   {
     for (long k = range.first; k <= range.second; ++k)
     {
-      std::string numberStr = std::to_string(k);
-      int mid = numberStr.length() / 2;
-      std::string left = numberStr.substr(0, mid);
-      std::string right = numberStr.substr(mid, numberStr.length());
-      if (left == right)
-      {
-        std::cout << " same : " << numberStr << std::endl;
-        counter += k;
-      }
+      // todo : implement new logic
     }
   }
 
@@ -68,3 +62,5 @@ int main()
 
   return 0;
 }
+
+// divide and conqueror?
