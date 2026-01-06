@@ -2,6 +2,13 @@
 
 using namespace std;
 
+int solve(int start, int end, int arr[6][5])
+{
+  int resul = 0;
+
+
+}
+
 int main()
 {
   int arr[6][5] = {
@@ -39,11 +46,4 @@ int main()
   }
 
   cout << result;
-}
-
-int solve(int start, int end, int arr[6][5])
-{
-  int resul = 0;
-  
-  
 }
