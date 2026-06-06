@@ -1,5 +1,3 @@
-package cses.repititions;
-
 import java.util.Scanner;
 
 public class Solution {

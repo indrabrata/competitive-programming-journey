@@ -1,16 +1,17 @@
-#include <bits/stdc++.h>
 
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
   int n, x;
   cin >> n >> x;
 
   vector<int> vec(n);
   int totalWeight = 0;
-  for (int i = 0; i < n; i++)
-  {
+  for (int i = 0; i < n; i++) {
     cin >> vec[i];
   }
 
@@ -20,18 +21,13 @@ int main()
   int end = vec.size() - 1;
 
   int ans = 0;
-  while (start < end)
-  {
-    if (vec[end] < x)
-    {
+  while (start < end) {
+    if (vec[end] < x) {
       int temp = vec[end] + vec[start];
-      if (temp > x)
-      {
+      if (temp > x) {
         end--;
         ans++;
-      }
-      else
-      {
+      } else {
         start++;
         end++;
         ans++;

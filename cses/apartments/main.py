@@ -1,7 +1,7 @@
 # https://cses.fi/problemset/task/1084
 
 n, m, k = map(int, input().split())
-desires = list(map(int, input().split()))  
+desires = list(map(int, input().split()))
 apartments = list(map(int, input().split()))
 
 count = 0
@@ -24,4 +24,3 @@ while i < n and j < m:
 
 
 print(count)
-

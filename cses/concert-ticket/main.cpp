@@ -1,13 +1,14 @@
-#include <bits/stdc++.h>
 
+
+#include <iostream>
+#include <vector>
 using namespace std;
-#define fast_cin()                  \
-  ios_base::sync_with_stdio(false); \
-  cin.tie(NULL);                    \
+#define fast_cin()                                                             \
+  ios_base::sync_with_stdio(false);                                            \
+  cin.tie(NULL);                                                               \
   cout.tie(NULL);
 
-int main()
-{
+int main() {
   fast_cin();
   int x, y;
   cin >> x >> y;
