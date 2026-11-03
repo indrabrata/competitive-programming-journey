@@ -1,19 +1,14 @@
 #include <vector>
 using namespace std;
 
-
-class Solution
-{
+class Solution {
 public:
-  bool canJump(vector<int> &nums)
-  {
-
-
-  }
+  bool canJump(vector<int> &nums) {}
 };
 
-
-int main()
-{
+int main() {
+  Solution sol;
+  vector<int> nums = {1, 2, 3, 4};
+  sol.canJump(nums);
   return 0;
 }
